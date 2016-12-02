@@ -8,6 +8,7 @@
 
 user1 = User.create!(user_name: 'isai')
 user2 = User.create!(user_name: 'bohdan')
+user3 = User.create!(user_name: 'alex')
 
 favorites = Poll.create!(title: 'favorites', author_id: user1.id)
 
@@ -23,3 +24,6 @@ fav_food_answer2 = AnswerChoice.create!(text: 'hamburger', question_id: fav_food
 
 fav_movie_answer1 = AnswerChoice.create!(text: 'Star Wars', question_id: fav_movie.id)
 fav_movie_answer2 = AnswerChoice.create!(text: 'Iron Man', question_id: fav_movie.id)
+
+fav_color_response1 = Response.create!(question_id: fav_color.id, answer_choice_id: fav_col_answer1.id, user_id: 2)
+fav_color_response2 = Response.create!(question_id: fav_color.id, answer_choice_id: fav_col_answer2.id, user_id: 3)
